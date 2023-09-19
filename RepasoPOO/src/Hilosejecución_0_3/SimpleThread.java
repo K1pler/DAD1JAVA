@@ -7,13 +7,15 @@ public class SimpleThread extends Thread {
 	
 	public SimpleThread (long delay,int times){
 		System.out.println("Constructor SimpleThread");
-		this.delay = delay; this.times = times;
+		this.delay = delay; 
+		this.times = times;
 	}
 	
 	public void run(){
 		try{
 			for( int aux = times;(times >= 0) || (aux == FOR_EVER);times--){
-				System.out.println("Mi delay es:"+delay);sleep(delay);
+				System.out.println("Mi delay es:"+delay);
+				sleep(delay);
 			}
 			System.out.println("He terminado....("+delay+")");
 		}catch(Exception e){ 
