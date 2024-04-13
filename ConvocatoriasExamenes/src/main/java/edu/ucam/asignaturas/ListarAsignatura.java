@@ -17,6 +17,6 @@ public class ListarAsignatura extends Accion {
         List<Asignatura> asignaturas = AsignaturaUtil.leerAsignaturas();
         request.setAttribute("asignaturas", asignaturas);
         
-        return "ListarAsignaturas.jsp"; // La ruta al JSP que lista las asignaturas
+        return "ListarAsignaturas.jsp"; 
     }
 }

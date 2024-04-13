@@ -21,16 +21,13 @@ public class AsignaturaUtil {
 		File file = new File(ASIGNATURAS_FILE);
 
 		if (!file.exists()) {
-			// Si el archivo no existe, podrías querer manejarlo de alguna manera
-			// Por ejemplo, podrías querer crear el archivo o lanzar una excepción
+			// Si el archivo no existe
 			file.createNewFile(); // Esto creará un archivo vacío si no existe
 		} else {
 			try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
 				String line;
 				while ((line = reader.readLine()) != null) {
 					String[] parts = line.split(";");
-					// Asegúrate de que las partes coincidan con cómo guardas las asignaturas
-					// Por ejemplo, si solo guardas el id y el nombre
 					Asignatura asignatura = new Asignatura(parts[0], parts[1]);
 					asignaturas.add(asignatura);
 				}
@@ -43,12 +40,10 @@ public class AsignaturaUtil {
 	public static void insertarAsignatura(Asignatura asignatura) throws IOException {
 		BufferedWriter writer = null;
 		try {
-			// Asegúrate de que el archivo exista antes de intentar escribir en él
 			File file = new File(ASIGNATURAS_FILE);
 			if (!file.exists()) {
 				file.createNewFile();
 			}
-			// Añadir true al FileWriter para habilitar el modo de añadir
 			writer = new BufferedWriter(new FileWriter(file, true));
 			writer.write(asignatura.getId() + ";" + asignatura.getNombre() + "\n");
 		} finally {
@@ -65,8 +60,6 @@ public class AsignaturaUtil {
 				writer.write(asignatura.getId() + ";" + asignatura.getNombre() + "\n");
 			}
 		}
-		// No necesitas manejar el cierre del BufferedWriter aquí ya que está en un
-		// try-with-resources
 	}
 
 	public static boolean borrarAsignaturaPorNombre(String nombre) throws IOException {
@@ -104,9 +97,6 @@ public class AsignaturaUtil {
 
         if (encontrado) {
             escribirAsignaturas(asignaturas);
-        } else {
-            // Manejar el caso en que la asignatura no se encuentra.
-            // Puede lanzar una excepción o simplemente no hacer nada si regresar false es suficiente.
         }
     }
 	public static boolean actualizarNombreAsignatura(String nombreActual, String nuevoNombre) throws IOException {

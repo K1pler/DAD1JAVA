@@ -22,7 +22,6 @@ public class AsignaturasListener implements ServletContextListener {
      */
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        // Intenta crear el archivo si no existe al iniciar la aplicación
         File file = new File(sce.getServletContext().getRealPath("/"), ASIGNATURAS_FILE);
         if (!file.exists()) {
             try {
