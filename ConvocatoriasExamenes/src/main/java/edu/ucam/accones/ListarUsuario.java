@@ -15,7 +15,7 @@ public class ListarUsuario extends Accion{
 	  
 	          List<Usuario> usuarios = AuthUtil.leerUsuarios();
 	          request.setAttribute("usuarios", usuarios);
-	          return "/ListarUsuario.jsp"; // La ruta al JSP que lista los usuarios
+	          return "/ListarUsuario.jsp"; 
 	      }
 
 }

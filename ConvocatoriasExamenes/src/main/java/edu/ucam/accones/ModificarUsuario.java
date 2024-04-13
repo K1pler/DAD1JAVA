@@ -15,7 +15,6 @@ public class ModificarUsuario extends Accion{
 		// TODO Auto-generated method stub
 		  String email = request.getParameter("email");
 	        String nuevoNombre = request.getParameter("nombre");
-	        // Otros parámetros según sea necesario
 
 	        Usuario usuario = AuthUtil.obtenerUsuarioPorEmail(email);
 	        if (usuario != null) {

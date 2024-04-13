@@ -24,12 +24,12 @@ public class Login extends Accion{
 	        HttpSession session = request.getSession();
 	        session.setAttribute("usuarioLogueado", usuario);
 	        if (usuario.isEsAdmin()) {
-	            return "Admin.jsp"; // Retornar la ruta de admin
+	            return "Admin.jsp"; 
 	        } else {
-	            return "Usuario.jsp"; // Retornar la ruta de usuario normal
+	            return "Usuario.jsp"; 
 	        }
 	    } else {
-	        return "Login.jsp?error=1"; // Retornar la ruta de login con error
+	        return "Login.jsp?error=1"; 
 	    }
 	}
 

@@ -19,7 +19,7 @@ public class InsertarUsuario extends Accion {
 		String password = request.getParameter("password");
 		boolean esAdmin = "true".equals(request.getParameter("esAdmin"));
 
-		// Crear el usuario y añadirlo a la "base de datos" (archivo, en este caso)
+		
 		Usuario usuario = new Usuario(nombre, email, password, esAdmin);
 		List<Usuario> usuarios = AuthUtil.leerUsuarios();
 		// TODO Auto-generated method stub
@@ -28,7 +28,7 @@ public class InsertarUsuario extends Accion {
 		AuthUtil.escribirUsuarios(usuarios);
 
 		// Redirigir al listado de usuarios o mostrar mensaje de éxito
-		return "CrearUsuario.jsp"; // Asumiendo que tienes un JSP que lista los usuarios
+		return "CrearUsuario.jsp"; 
 	}
 
 }
