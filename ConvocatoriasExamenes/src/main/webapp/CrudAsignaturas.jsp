@@ -12,7 +12,7 @@
         <li><a href="Control?<%=Control.PARAM_ACTION_ID%>=BORRAR_ASIGNATURA">Borrar</a></li>
         <li><a href="Control?<%=Control.PARAM_ACTION_ID%>=MODIFICAR_ASIGNATURA">Modificar</a></li>
         <li><a href="Control?<%=Control.PARAM_ACTION_ID%>=LISTAR_ASIGNATURA">Listar</a></li>
-        <li><a href="Control?<%=Control.PARAM_ACTION_ID%>=GET_ASIGNATURA">GET</a></li>
+        <li><a href="Control?<%=Control.PARAM_ACTION_ID%>=BUSCAR_ASIGNATURA">GET</a></li>
     </ul>
 </body>
 </html>

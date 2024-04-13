@@ -63,7 +63,7 @@ public class FiltroAutenticacion extends HttpFilter implements Filter {
         if (isProtectedPath) {
             // Si es una de las páginas protegidas y el usuario no ha iniciado sesión, redirigir a login.jsp
             if (session == null || session.getAttribute("usuarioLogueado") == null) {
-                response.sendRedirect(request.getContextPath() + "/login.jsp");
+                response.sendRedirect(request.getContextPath() + "/Login.jsp");
                 return;
             }
         }

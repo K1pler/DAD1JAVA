@@ -31,6 +31,6 @@ public class InsertarAsignatura extends Accion {
     private String generarIdUnico() {
         // Implementa la lógica para generar un ID único para cada asignatura
         // Esto es solo un placeholder
-        return "ASG" + System.currentTimeMillis();
+        return "ID" + System.currentTimeMillis();
     }
 }
